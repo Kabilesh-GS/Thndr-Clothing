@@ -1,0 +1,28 @@
+.navigation-pannel {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+
+  .navigation-logo-container {
+    height: 100%;
+    padding: 15px;
+    .navigation-logo{
+      width: 60px;
+    }
+  }
+
+  .navigation-links-conatiner {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .navigation-link {
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+  }
+}
