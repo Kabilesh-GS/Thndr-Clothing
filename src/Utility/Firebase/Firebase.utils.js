@@ -10,12 +10,13 @@ const firebaseConfig = {
   appId: "1:626460972621:web:12eb1bdfe464c6d42b2e04"
 };
 
-const firebaseApp = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
-const provide = new GoogleAuthProvider();
-provide.setCustomParameters({
-  prompt : "select_account"
-})
+export const auth = getAuth(app);
 
-export const auth = getAuth();
-export const signInWithGooglePopup = () => signInWithPopup(auth, provide);
+export const provider = new GoogleAuthProvider();
+provider.setCustomParameters({
+  prompt: "select_account"
+});
+
+export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
