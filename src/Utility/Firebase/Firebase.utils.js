@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { getAuth, signInWithPopup, signInWithRedirect, GoogleAuthProvider} from 'firebase/auth'
+import { getFirestore,doc,getDoc,setDoc } from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: "AIzaSyC3Mg-83EWoDMVP7LV_smjBC1_8lh8ZI5I",
@@ -13,10 +14,31 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
-
 export const provider = new GoogleAuthProvider();
 provider.setCustomParameters({
   prompt: "select_account"
 });
-
 export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
+
+export const DB = getFirestore();
+export const UserAuthData = async (userID) => {
+  const UserDocPresent = doc(DB, 'users' ,userID.uid);
+  const UserDataView = await getDoc(UserDocPresent);
+  console.log(UserDataView.exists());
+
+  if(!UserDataView.exists()){
+    const createdDate = new Date();
+    const {displayName , email} = userID;
+
+    try{
+      await setDoc(UserDocPresent, {
+        displayName,
+        email,
+        createdDate
+      });
+    }catch(error){
+        console.log('Cannot add data', error);
+    }
+  }
+  return UserDocPresent;
+}

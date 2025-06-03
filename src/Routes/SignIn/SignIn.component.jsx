@@ -1,8 +1,9 @@
-import {signInWithGooglePopup} from '../../Utility/Firebase/Firebase.utils';
+import {signInWithGooglePopup,UserAuthData} from '../../Utility/Firebase/Firebase.utils';
 
 const logGoogleUser = async () => {
     const response = await signInWithGooglePopup();
-    console.log(response);
+    console.log(response.user);
+    UserAuthData(response.user);
   }
 
 const SignIn = () => {
