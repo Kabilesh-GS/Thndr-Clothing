@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app'
-import { getAuth, signInWithPopup, signInWithRedirect, GoogleAuthProvider} from 'firebase/auth'
+import { getAuth, signInWithPopup, createUserWithEmailAndPassword, GoogleAuthProvider} from 'firebase/auth'
 import { getFirestore,doc,getDoc,setDoc } from 'firebase/firestore'
 
 const firebaseConfig = {
@@ -24,7 +24,6 @@ export const DB = getFirestore();
 export const UserAuthData = async (userID) => {
   const UserDocPresent = doc(DB, 'users' ,userID.uid);
   const UserDataView = await getDoc(UserDocPresent);
-  console.log(UserDataView.exists());
 
   if(!UserDataView.exists()){
     const createdDate = new Date();

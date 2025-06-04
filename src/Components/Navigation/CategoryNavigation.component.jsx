@@ -1,7 +1,7 @@
 import CategoryItem from "../Category-item/Category-item.component";
 import './Navigation.style.scss'
 
-const Navigation = ({categories}) => {
+const CategoryNavigation = ({categories}) => {
   return (
     <div className="directory-container">
       {categories.map((categories) => (
@@ -11,4 +11,4 @@ const Navigation = ({categories}) => {
   );
 };
 
-export default Navigation;
+export default CategoryNavigation;

@@ -1,4 +1,4 @@
-import Navigation from "../../Components/Navigation/Navigation.component.jsx"
+import CategoryNavigation from "../../Components/Navigation/CategoryNavigation.component.jsx"
 
 function Home() {
 
@@ -31,7 +31,7 @@ function Home() {
   ]
 
   return (
-    <Navigation categories={categories} />
+    <CategoryNavigation categories={categories} />
   )
 }
 
