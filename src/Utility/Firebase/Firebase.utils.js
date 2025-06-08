@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app'
-import { getAuth, signInWithPopup, createUserWithEmailAndPassword, GoogleAuthProvider} from 'firebase/auth'
+import { getAuth, signInWithPopup, createUserWithEmailAndPassword, GoogleAuthProvider,signInWithEmailAndPassword} from 'firebase/auth'
 import { getFirestore,doc,getDoc,setDoc } from 'firebase/firestore'
 
 const firebaseConfig = {
@@ -21,7 +21,7 @@ provider.setCustomParameters({
 export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 
 export const DB = getFirestore();
-export const UserAuthData = async (userID) => {
+export const UserAuthData = async (userID, additionalInfo = {}) => {
   const UserDocPresent = doc(DB, 'users' ,userID.uid);
   const UserDataView = await getDoc(UserDocPresent);
 
@@ -33,11 +33,19 @@ export const UserAuthData = async (userID) => {
       await setDoc(UserDocPresent, {
         displayName,
         email,
-        createdDate
+        createdDate,
+        ...additionalInfo
       });
     }catch(error){
         console.log('Cannot add data', error);
     }
   }
   return UserDocPresent;
+}
+
+export const CreateUserWithEmailAndPassword = async (email,password) => {
+  return await createUserWithEmailAndPassword(auth,email,password)
+}
+export const SignInUserEmailPassword = async (email,password) => {
+  return await signInWithEmailAndPassword(auth,email,password);
 }
