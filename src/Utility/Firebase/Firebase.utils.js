@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app'
-import { getAuth, signInWithPopup, createUserWithEmailAndPassword, GoogleAuthProvider,signInWithEmailAndPassword} from 'firebase/auth'
+import { getAuth, signInWithPopup, signOut,createUserWithEmailAndPassword, GoogleAuthProvider,signInWithEmailAndPassword} from 'firebase/auth'
 import { getFirestore,doc,getDoc,setDoc } from 'firebase/firestore'
 
 const firebaseConfig = {
@@ -19,6 +19,7 @@ provider.setCustomParameters({
   prompt: "select_account"
 });
 export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
+export const signOutFun = () => signOut(auth);
 
 export const DB = getFirestore();
 export const UserAuthData = async (userID, additionalInfo = {}) => {
