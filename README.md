@@ -10,5 +10,5 @@ Thndr Clothing a clothing site created entirely on React. The site will contains
   <li><strong>Styling:</strong> SASS</li>
   <li><strong>Routing:</strong> React Router</li>
   <li><strong>Backend:</strong> Firebase</li>
-  <li><strong>Deployment:</strong> Netlify (Yet to be deployed)</li>
+  <li><strong>Deployment:</strong> Netlify</li>
 </ul>
