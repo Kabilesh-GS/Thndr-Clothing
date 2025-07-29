@@ -41,7 +41,19 @@ export const UserAuthData = async (userID, additionalInfo = {}) => {
         console.log('Cannot add data', error);
     }
   }
-  return UserDocPresent;
+}
+export const getUserData = async (uid) =>{
+  try{
+    const userDocRef = doc(DB, 'users', uid);
+    const userSnap = await getDoc(userDocRef);
+
+    if(userSnap.exists()){
+      return userSnap.data();
+    }
+  }
+  catch(error){
+    alert("No data found");
+  }
 }
 
 export const CreateUserWithEmailAndPassword = async (email,password) => {

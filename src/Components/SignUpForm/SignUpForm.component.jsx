@@ -34,7 +34,8 @@ const SignUpForm = () => {
     }
 
     try{
-      const { user } = await CreateUserWithEmailAndPassword(email,password);
+      const u = await CreateUserWithEmailAndPassword(email,password);
+      const user = u.user;
       await UserAuthData(user, {displayName});
       ResetForm();
     }
