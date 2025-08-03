@@ -2,8 +2,10 @@ import Home from "./Routes/Home/Home.component"
 import Authentication from "./Routes/Authentication/Authentication.component"
 import Navigation from "./Routes/Navigation/Navigation.component"
 import Profile from "./Routes/Profile/Profile.component"
+import Tees from "./Routes/Tees/Tees.component"
+
 import { Routes,Route,useNavigate,useLocation } from "react-router-dom"
-import {useAuthState} from 'react-firebase-hooks/auth';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from "./Utility/Firebase/Firebase.utils";
 import { useEffect } from "react"
 
@@ -26,6 +28,7 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<Home/>} />
+        <Route path="/tees" element={<Tees/>} />
         {user ? <Route path="/profile" element={<Profile/>}/> : <Route path="/authentication" element={<Authentication/>} />}
       </Routes>
     </>

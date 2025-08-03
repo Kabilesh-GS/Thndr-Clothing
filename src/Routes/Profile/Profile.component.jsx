@@ -1,4 +1,5 @@
 import { signOutFun, getUserData } from "../../Utility/Firebase/Firebase.utils";
+import './Profile.style.scss';
 import Button from "../../Components/Button/Button.component";
 import FormInput from "../../Components/FormInput/FormInput.component";
 import { getAuth } from "firebase/auth";
@@ -19,10 +20,12 @@ const Profile = () => {
   },[])
 
   return(
-    <div>
-      <FormInput label="Name" inputOptions={{value: UserData?.displayName || ''}} readonly/>
-      <FormInput label="email" inputOptions={{value: UserData?.email || ''}} readonly/>
-      <Button onClick={signOutFun} children="SignOut" />
+    <div className="containerOuter">
+      <div className="container">
+        <FormInput label="Name" inputOptions={{value: UserData?.displayName || ''}} readonly/>
+        <FormInput label="email" inputOptions={{value: UserData?.email || ''}} readonly/>
+        <Button onClick={signOutFun} children="SignOut" />
+      </div>
     </div> 
   )
 }
