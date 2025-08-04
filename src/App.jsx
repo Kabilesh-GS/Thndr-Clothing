@@ -3,6 +3,10 @@ import Authentication from "./Routes/Authentication/Authentication.component"
 import Navigation from "./Routes/Navigation/Navigation.component"
 import Profile from "./Routes/Profile/Profile.component"
 import Tees from "./Routes/Tees/Tees.component"
+import Pants from "./Routes/Pants/Pants.component"
+import Hats from "./Routes/Hats/Hats.component"
+import Shoes from "./Routes/Shoes/Shoes.component"
+import Shades from "./Routes/Shades/Shades.component"
 
 import { Routes,Route,useNavigate,useLocation } from "react-router-dom"
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -29,6 +33,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/tees" element={<Tees/>} />
+        <Route path="/pants" element={<Pants/>}/>
+        <Route path="/hats" element={<Hats/>}/>
+        <Route path="/shoes" element={<Shoes/>}/>
+        <Route path="/shades" element={<Shades/>}/>
         {user ? <Route path="/profile" element={<Profile/>}/> : <Route path="/authentication" element={<Authentication/>} />}
       </Routes>
     </>

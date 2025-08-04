@@ -1,42 +1,42 @@
 import Products from "../../Components/Products/Products.component";
 
-const Tees = () => {
-  const products = [
+const Pants = () => { 
+    const products = [
     {
       id : 1,
-      name: 'Regular Tee',
-      price: 4.99,
+      name: 'Jean',
+      price: 9.99,
       rating : 4.1
     },
     {
       id : 2,
-      name: 'Oversized Tee',
-      price: 9.99,
+      name: 'Baggy Jean',
+      price: 14.99,
       rating : 4.0
     },
     {
       id : 3,
-      name: 'Printed Tee',
-      price: 5.99,
+      name: 'Tracks',
+      price: 7.99,
       rating : 4.6
     },
     {
       id : 4,
-      name: 'Polo Tee',
-      price: 14.99,
+      name: 'Shorts',
+      price: 4.99,
       rating : 3.6
     },
     {
       id : 5,
-      name: 'Full Sleve Tee',
-      price: 6.99,
+      name: 'Formals',
+      price: 19.99,
       rating : 4.7
     }
   ]
-  
-  return (
+
+  return(
     <Products products={products}/>
   )
 }
 
-export default Tees;
+export default Pants;

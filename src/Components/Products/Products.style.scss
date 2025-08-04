@@ -1,0 +1,25 @@
+.mainContainer{
+  display: flex;
+  margin: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  .itemContainer{
+    margin: 5px 5px;
+    display: flex;
+    flex-direction: column;
+    min-width: 210px;
+    border: black 1px solid;
+    padding: 5px 10px;
+    .price{
+      margin: 0px;
+    }
+    .name{
+      margin: 0px; 
+    }
+    .rating{
+      font-size: 13px;
+      margin: 0px;
+    }
+  }
+}
