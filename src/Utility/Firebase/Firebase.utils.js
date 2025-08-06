@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { getAuth, signInWithPopup, signOut,createUserWithEmailAndPassword, GoogleAuthProvider,signInWithEmailAndPassword} from 'firebase/auth'
-import { getFirestore,doc,getDoc,setDoc } from 'firebase/firestore'
+import { getFirestore,doc,getDoc,setDoc, collection, getDocs } from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: "AIzaSyC3Mg-83EWoDMVP7LV_smjBC1_8lh8ZI5I",
@@ -53,12 +53,29 @@ export const addCart = async (e, userID) => {
         id: e.id,
         name: e.name,
         image : e.image,
+        price : e.price,
+        rating : e.rating
       })
     }
     catch(error){
       console.log(error);
     }
   }
+}
+
+export const displayCart = async (userID) => {
+  const userData = collection(DB,'users', userID.uid,'cart');
+    try{
+      const data = await getDocs(userData);
+      const cartItems = data.docs.map((doc) => ({
+        id : doc.id,
+        ...doc.data()
+      }))
+      return cartItems;
+    }
+    catch(error){
+      console.log(error);
+    }
 }
 
 export const getUserData = async (uid) =>{

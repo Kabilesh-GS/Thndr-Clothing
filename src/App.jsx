@@ -7,6 +7,7 @@ import Pants from "./Routes/Pants/Pants.component"
 import Hats from "./Routes/Hats/Hats.component"
 import Shoes from "./Routes/Shoes/Shoes.component"
 import Shades from "./Routes/Shades/Shades.component"
+import Cart from "./Routes/Cart/Cart.component"
 
 import { Routes,Route,useNavigate,useLocation } from "react-router-dom"
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -37,6 +38,7 @@ function App() {
         <Route path="/hats" element={<Hats/>}/>
         <Route path="/shoes" element={<Shoes/>}/>
         <Route path="/shades" element={<Shades/>}/>
+        <Route path="/cart" element={<Cart/>}/>
         {user ? <Route path="/profile" element={<Profile/>}/> : <Route path="/authentication" element={<Authentication/>} />}
       </Routes>
     </>

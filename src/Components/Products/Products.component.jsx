@@ -1,7 +1,9 @@
 import './Products.style.scss'
+import CartButton from '../CartButton/CartButton.component';
+
 import { FaStar } from "react-icons/fa";
 import { addCart,auth } from '../../Utility/Firebase/Firebase.utils';
-import {useAuthState} from 'react-firebase-hooks/auth';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 const Products = ({products}) => {
   const [user] = useAuthState(auth);
@@ -21,7 +23,7 @@ const Products = ({products}) => {
             <p className='rating'><FaStar/> {e.rating}</p>
             <p className='price'>$ {e.price}</p>
           </div>
-          <button onClick={() => {addToCart(e)}}>Add to Cart</button>
+          <CartButton onclick={() => {addToCart(e)}}/>
         </div>
       ))}
     </div>
