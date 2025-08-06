@@ -42,6 +42,25 @@ export const UserAuthData = async (userID, additionalInfo = {}) => {
     }
   }
 }
+
+export const addCart = async (e, userID) => {
+  const userData = doc(DB,'users', userID.uid,'cart',e.id);
+  const userDataView = await getDoc(userData);
+
+  if(!userDataView.exists()){
+    try{
+      await setDoc(userData, {
+        id: e.id,
+        name: e.name,
+        image : e.image,
+      })
+    }
+    catch(error){
+      console.log(error);
+    }
+  }
+}
+
 export const getUserData = async (uid) =>{
   try{
     const userDocRef = doc(DB, 'users', uid);
