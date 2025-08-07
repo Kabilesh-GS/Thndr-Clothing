@@ -1,10 +1,10 @@
-.mainContainer{
+.MainContainer{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   .itemContainer{
-    height: 370px;
+    height: 300px;
     margin: 5px 5px;
     display: flex;
     flex-direction: column;
@@ -20,16 +20,6 @@
     .productDetails{
       padding: 5px 10px;
       margin: 0px;
-      input{
-        border: none;
-        background-color: #f0f0f0;
-        width: 55px;
-        border-radius: 0px;
-        font-family: "Oswald", sans-serif;
-        &:focus{
-          outline: none;
-        }
-      }
     }
     p,h3{
       margin: 0px;

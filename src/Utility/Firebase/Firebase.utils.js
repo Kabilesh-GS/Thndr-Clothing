@@ -43,7 +43,7 @@ export const UserAuthData = async (userID, additionalInfo = {}) => {
   }
 }
 
-export const addCart = async (e, userID) => {
+export const addCart = async (e, userID, quantity) => {
   const userData = doc(DB,'users', userID.uid,'cart',e.id);
   const userDataView = await getDoc(userData);
 
@@ -54,7 +54,8 @@ export const addCart = async (e, userID) => {
         name: e.name,
         image : e.image,
         price : e.price,
-        rating : e.rating
+        rating : e.rating,
+        quantity: quantity
       })
     }
     catch(error){

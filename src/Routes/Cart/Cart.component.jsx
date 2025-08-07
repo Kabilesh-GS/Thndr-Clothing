@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Products from "../../Components/Products/Products.component";
 import { displayCart,auth } from "../../Utility/Firebase/Firebase.utils";
 import { useAuthState } from "react-firebase-hooks/auth";
 
+import CartProducts from "../../Components/CartProducts/CartProducts.component";
 
 const Cart = () => {
 
@@ -14,14 +14,13 @@ const Cart = () => {
       const response = await displayCart(user);
       setCart(response);
     }
-
     getCart();
   },[user])
 
-
-
   return(
-    <Products products={Cart} />
+    <>
+      {Cart.length>0 ? <CartProducts products={Cart} /> : <p style={{textAlign: 'center'}}>NO ITEM(S) IN CART</p>}
+    </>
   )
 }
 

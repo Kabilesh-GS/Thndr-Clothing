@@ -7,6 +7,7 @@ const Tees = () => {
       name: 'Regular Tee',
       price: 4.99,
       rating : 4.1,
+      quantity: 5,
       image : 'https://bananaclub.co.in/cdn/shop/files/GreyishBlueRegularT-shirt_5.jpg'
     },
     {
@@ -14,6 +15,7 @@ const Tees = () => {
       name: 'Oversized Tee',
       price: 9.99,
       rating : 4.0,
+      quantity: 10,
       image : 'https://fansarmy.in/cdn/shop/products/front_ec21b800-14cd-4594-8561-d506f6b8c764.jpg'
     },
     {
@@ -21,6 +23,7 @@ const Tees = () => {
       name: 'Printed Tee',
       price: 5.99,
       rating : 4.6,
+      quantity: 17,
       image: 'https://m.media-amazon.com/images/I/71YEIVXS6tL._UY1100_.jpg'
     },
     {
@@ -28,6 +31,7 @@ const Tees = () => {
       name: 'Polo Tee',
       price: 14.99,
       rating : 3.6,
+      quantity: 7,
       image : 'https://caslay.in/cdn/shop/files/0W2A7824.jpg'
     },
     {
@@ -35,6 +39,7 @@ const Tees = () => {
       name: 'Full Sleve Tee',
       price: 6.99,
       rating : 4.7,
+      quantity: 6,
       image: 'https://veirdo.in/cdn/shop/files/ai_10.jpg'
     }
   ]
