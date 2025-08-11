@@ -12,15 +12,46 @@
     position: relative;
     width: 900px;
     background-color: aliceblue;
-    padding: 10px 15px;
+    padding: 30px 55px;
+    .deliveryHike{
+      color: grey;
+      font-size: small;
+      margin: 10px 0px 0px 0px;
+    }
+    .totalPrice{
+      margin-top: 0px;
+    }
+    P{
+      text-align: end;
+    }
     h3{
       margin: 0px 0px 15px 0px;
     }
     button{
       position: absolute;
-      top: 10px;
-      margin: 5px 0px; 
-      right: 10px;
+      top: 30px;
+      margin: 5px 0px;
+      font-weight: bold;
+      right: 55px;
+      border: none;
+      cursor: pointer;
+      background-color: aliceblue;
+    }
+    .items{
+      display: flex;
+      justify-content: space-between;
+      div{
+        display: flex;
+        width: 200px;
+        .name{
+          width: 150px;
+          text-align: start;
+        }
+        div{
+          display: flex;
+          justify-content: end;
+        }
+      }
     }
   }
 }
