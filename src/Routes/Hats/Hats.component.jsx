@@ -41,6 +41,22 @@ const Hats = () => {
       quantity: 57,
       rating : 4.7,
       image: 'https://www.hatcountry.com/cdn/shop/files/CowboyMobileF_14c60454-8307-48a7-900b-d73ff2eec26a.webp?v=1727446620&width=862'
+    },
+    {
+      id : 'H6',
+      name: 'Beret',
+      price: 29.99,
+      quantity: 3,
+      rating : 4.0,
+      image: 'https://i.etsystatic.com/23172465/r/il/99e7e4/2758814249/il_570xN.2758814249_kigw.jpg'
+    },
+    {
+      id : 'H7',
+      name: 'Fedora',
+      price: 14.99,
+      quantity: 20,
+      rating : 4.5,
+      image: 'https://stylishlyme.com/wp-content/uploads/2014/11/Fall-green-hat-and-navy-sweater.jpg'
     }
   ]
 

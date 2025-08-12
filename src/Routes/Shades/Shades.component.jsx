@@ -41,6 +41,22 @@ const products = [
       quantity: 22,
       rating : 4.5,
       image: 'https://images.meesho.com/images/products/259717804/g3hbo_512.jpg'
+    },
+    {
+      id : 'Sho6',
+      name: 'Cat eye',
+      price: 14.99,
+      quantity: 6,
+      rating : 4.1,
+      image: 'https://eyejack.in/cdn/shop/files/5661CL1261_First.jpg?v=1746523156'
+    },
+    {
+      id : 'Sho7',
+      name: 'Rectangle',
+      price: 34.99,
+      quantity: 15,
+      rating : 4.9,
+      image: 'https://sunglassic.com/cdn/shop/products/IMG_2642.jpg?v=1637599768'
     }
   ]
 

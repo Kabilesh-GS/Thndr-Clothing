@@ -41,6 +41,22 @@ const Pants = () => {
       rating : 4.7,
       quantity: 60,
       image : 'https://i.pinimg.com/474x/7e/63/51/7e6351d9965c4c66adf28aafbcb358b4.jpg'
+    },
+    {
+      id : 'P6',
+      name: 'Cargo',
+      price: 24.99,
+      rating : 4.7,
+      quantity: 30,
+      image : 'https://lachicpick.in/wp-content/uploads/2023/07/959-1.jpg'
+    },
+    {
+      id : 'P7',
+      name: 'Culottes',
+      price: 12.99,
+      rating : 3.6,
+      quantity: 10,
+      image : 'https://assets.ajio.com/medias/sys_master/root/20240207/Xx9T/65c2b2128cdf1e0df5ef5555/-473Wx593H-467048834-navy-MODEL.jpg'
     }
   ]
 

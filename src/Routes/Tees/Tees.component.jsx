@@ -41,6 +41,22 @@ const Tees = () => {
       rating : 4.7,
       quantity: 6,
       image: 'https://veirdo.in/cdn/shop/files/ai_10.jpg'
+    },
+    {
+      id : 'T6',
+      name: 'Sleveless Tee',
+      price: 8.99,
+      rating : 4.7,
+      quantity: 10,
+      image: 'https://iciw.centracdn.net/client/dynamic/images/10703_a67d2568c6-13192-021-1-1350x0.jpg'
+    },
+    {
+      id : 'T7',
+      name: 'V neck Tee',
+      price: 5.99,
+      rating : 3.6,
+      quantity: 5,
+      image: 'https://src1.ilogo.in/images/products/8473/custom-mens-v-neck-t-shirt.webp'
     }
   ]
   

@@ -41,6 +41,22 @@ const Shoes = () => {
       rating : 4.7,
       quantity: 30,
       image: 'https://images.meesho.com/images/products/380664375/k1dmv_512.webp?width=512'
+    },
+    {
+      id : 'S6',
+      name: 'Boots',
+      price: 49.99,
+      rating : 4.3,
+      quantity: 10,
+      image: 'https://5.imimg.com/data5/SELLER/Default/2024/9/450814060/HB/RS/PI/4801568/4dbf4ebe-ec3a-4cc2-9f9c-5998c7fcefa0-500x500.jpg'
+    },
+    {
+      id : 'S7',
+      name: 'Oxfords',
+      price: 39.99,
+      rating : 4.0,
+      quantity: 15,
+      image: 'https://funkytradition.com/cdn/shop/files/5_Perimedes-Men-s-Tango-Latin-Dance-Shoes-male-Casual-Oxford-Leather-Wedding-sport-Shoes-Latin-Prom_c6e40c6f-57e0-4e1a-9278-02a9ed98f2a2.jpg?v=1723517488'
     }
   ]
 
