@@ -13,7 +13,10 @@ const PopupCart = (props) => {
 
   if(total<200) {
     totalDelivery = total + 15;
-  };
+  }
+  else{
+    totalDelivery = total;
+  }
 
   return props.trigger ? (
     <div className="popup">

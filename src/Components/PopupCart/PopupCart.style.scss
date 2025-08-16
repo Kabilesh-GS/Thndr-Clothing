@@ -19,7 +19,7 @@
       margin: 10px 0px 0px 0px;
     }
     .totalPrice{
-      margin-top: 0px;
+      margin-top: 20px;
     }
     P{
       text-align: end;
@@ -40,6 +40,9 @@
     .items{
       display: flex;
       justify-content: space-between;
+      p{
+        margin: 10px 0px; 
+      }
       div{
         display: flex;
         width: 200px;
