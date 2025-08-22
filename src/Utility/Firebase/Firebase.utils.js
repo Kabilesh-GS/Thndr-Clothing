@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { getAuth, signInWithPopup, signOut,createUserWithEmailAndPassword, GoogleAuthProvider,signInWithEmailAndPassword} from 'firebase/auth'
-import { getFirestore,doc,getDoc,setDoc, collection, getDocs } from 'firebase/firestore'
+import { getFirestore,doc,getDoc,setDoc, collection, getDocs, deleteDoc } from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: "AIzaSyC3Mg-83EWoDMVP7LV_smjBC1_8lh8ZI5I",
@@ -61,6 +61,16 @@ export const addCart = async (e, userID, quantity) => {
     catch(error){
       console.log(error);
     }
+  }
+}
+
+export const removeCart = async (userID, id) => {
+  const getDocument = doc(DB,'users', userID.uid, 'cart', id);
+  try{
+    await deleteDoc(getDocument);
+  }
+  catch(error){
+    console.log('Error removing item from cart:', error);
   }
 }
 

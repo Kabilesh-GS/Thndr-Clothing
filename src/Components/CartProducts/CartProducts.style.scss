@@ -10,12 +10,26 @@
     justify-content: center;
     align-items: center;
     .itemContainer{
-      height: 300px;
+      height: 320px;
       margin: 5px 5px;
       display: flex;
       flex-direction: column;
       width: 215px;
       border: black 1px solid;
+      button{
+        cursor: pointer;
+        border: none;
+        padding: 5px 0px 5px 10px;
+        margin: 0px 0px 0px 0px;
+        display: flex;
+        font-family: "Oswald", sans-serif;
+        gap: 5px;
+        align-items: center;
+        &:hover{
+          background-color: black;
+          color: white;
+        }
+      }
       .productImage{
         overflow: hidden;
           .image{
