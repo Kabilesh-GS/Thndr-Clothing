@@ -9,13 +9,13 @@ const Cart = () => {
   const [user] = useAuthState(auth);
   const [Cart, setCart] = useState([]);
 
-  useEffect(()=>{
-    const getCart = async () => {
-      const response = await displayCart(user);
-      setCart(response);
-    }
-    getCart();
-  },[user])
+  useEffect(() => {
+   if (!user) return;
+   const unsubscribe = displayCart(user, (cartItems) => {
+    setCart(cartItems);
+   });
+   return unsubscribe;
+  }, [user]);
 
   return(
     <>
