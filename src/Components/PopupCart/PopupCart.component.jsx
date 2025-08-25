@@ -37,7 +37,10 @@ const PopupCart = (props) => {
         ))}
         {total < 200 ? <p className="deliveryHike">Delivery Charges Applied $15</p> : ""}
         <p className="totalPrice">$&nbsp;{totalDelivery.toFixed(2)}</p>
-        <button onClick={props.click}>X</button>
+        <button className="closeBtn" onClick={props.click}>X</button>
+        <p className="buyNowBtn">
+          <button>BUY</button>
+        </p>
       </div>
     </div>
   ) : "";

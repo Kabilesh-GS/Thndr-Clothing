@@ -27,7 +27,25 @@
     h3{
       margin: 0px 0px 15px 0px;
     }
-    button{
+    .buyNowBtn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px;
+      button{
+        padding: 8px 35px 8px 35px;
+        background-color: aliceblue;
+        border: solid 1px black;
+        font-family: 'Open Sans Condensed';
+        font-weight: bolder;
+        cursor: pointer;
+        &:hover{
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+    .closeBtn{
       position: absolute;
       top: 30px;
       margin: 5px 0px;
